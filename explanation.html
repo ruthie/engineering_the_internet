@@ -1,0 +1,78 @@
+<head>
+  <title>What is Engineering the Internet?</title>
+</head>
+
+<h1>What is <u>Engineering the Internet</u>?</h1>
+
+<p>
+Engineering the Internet was a 40 hour course I taught in Summer 2013 for MIT ESP's <a href="http://esp.mit.edu/learn/Junction/index.html">Junction</a> program, an academic program for high school students organized by MIT students.  It introduced computer science by having students write and deploy a static website and understand the underlying infrastructure.
+</p>
+
+<p>
+This is the class website more-or-less as it was during the class.  I have retroactively made a few minor changes (for example adding additional instructions for homework assignments) in order to make my handouts more potentially usable by others, but the core content is the same.
+</p>
+
+<h2>Goals</h2>
+
+<h3>Provide a formal, non programming-centric introduction to computer science</h3>
+<p>
+As a beginning computer science student, I was ahead of my peers just programming, but frequently behind them when it came to using computers in practice.  While I spent hours in high school writing java code, I couldn't so much as deploy something I wrote outside of my IDE.  The practical skills that I lacked are certainly necessary to succeed as a software engineer, but they had a much stronger affect on my confidence.  The fact that when my computer broke, I went running to my friends made me think I lacked what it took to be a software engineer.
+</p>
+
+<p>
+Some people pick up these skills informally, often before learning a high level programming language, but I found them much harder to learn than programming.  I wanted Engineering the Internet to give students a start in developing the skills of manipulating a computer system that they could build on on their own.
+</p>
+
+<p>
+Concretely, I wanted students to leave the course:
+<ul>
+  <li>Able to figure out how to use a new tool on their own</li>
+  <li>Aware of debugging resources (e.g. console output, stack-overflow, source diving)</li>
+  <li>Confident in their ability to program a computer</li>
+</ul>
+</p>
+
+<h2>Strategy</h2>
+
+<h3>Material</h3>
+I chose the internet as a theme because it's appealing and because it touches on a lot of the types of topics I was interested in covering, adn because those topics would probably be new to most students, regardless of experience.
+
+The general list of topics is as follows (<a href="http://www.engineeringtheinternet.nfshost.com/junction_syllabus.pdf">full syllabus</a>):
+<ul>
+<li>Navigating your computer with bash (basic commands, files, pipes and redirects)</li>
+<li>Networking (TCP/IP suite, ping and traceroute, wireshark)</li>
+<li>Building a website (HTML, CSS, Javascript)</li>
+<li>Advanced topics (dynamic websites, security)</li>
+</ul>
+
+<h3>Presentation</h3>
+I wanted to present enough about the systems I was covering to make them not only understandable, but also usable.  Some rules of thumb I used were:
+
+<ul>
+<li>Adress explicitly how to do things which people are sometimes just expected to figure out.</li>
+<p>The foremost example is how to use a command line.  No one ever taught me to do it, I just learned as I needed its tools.</p>
+<li>Explain the surrounding system; don't handwave.</li>
+<p>Don't leave parts of what studens will work on unapproachable.  If you know how to write website code, but not how to do network debugging, you will often find yourself blindly typing into a command line.  Which sucks, because if it doesn't work, you're stuck.</p>
+<li>Give each student technical ownership of their work</li>
+<p>Students should not only write code, but deploy it and manage its deployments.  This should teach them skills key to making future projects rewarding, as well as build confidence.  No group projects.</p>
+</ul>
+
+<h2>What worked</h2>
+<p>
+I succeeded at making a class that didn't overly reward experience.  The less experienced students who did the homework were successful and the more experienced students didn't have automatic success.  This was mostly a property of what I was teaching, which was new even to students who had programmed before.
+</p>
+
+<h2>What could have been improved</h2>
+<p>
+I think the biggest shortcoming of the class was a lack of motivation for the beginning parts.  It wasn't obvious to the students why bash was useful while we were learning bash.  If I taught the class again, I would probably start with HTML.  HTML is the most familiar and approachable topic of the semester, so it would give students some early success, but more importantly, having something they wanted to put on the internet would give them a reason to learn other skills, like bash.
+</p>
+
+<p>
+I would also probably add and remove some material.  The students didn't seem very interested in the networking unit; I would shorten it and rework it to focus more on information they might use writing and managing websites instead of focusing on how the network works as a system.  
+</p>
+<p>
+I would use the time saved not talking about networking to spend more time on dynamic websites.  Students can understand HTML forms and post and put requests, or how to install a wiki or wordpress site, or talk conceptually about cgi-bin without programming experience.</p>
+</p>
+
+<h2>Is this class even possible?</h2>
+A lot of what computer science is about is breaking up a big problem into a bunch of smaller steps.  When you're learning to program, that's obvious.  When you're learning to navigate a computer system, however, the pieces you want to break the problem into depend on the details of the system.  These problems are harder to get traction on without those details, so they're hard for beginners.  Programming is a much gentler introduction to computer science because it sandboxes the process of breaking up a problem in a closed environment where you know what your tools are.
