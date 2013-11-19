@@ -1,0 +1,69 @@
+Application layer:
+
+Innermost packet
+
+=========================================
+HTTP:  Hyper Text Transfer Protocol
+=========================================
+*Been around since ~1991 (first web browser exists in ~1990)
+ (gone through a couple of versions)
+*designed as a web browser protocol, for fetching html files
+
+*client/server protocol:  what does that mean
+	       asymetric functions
+
+========================
+Request spec
+========================
+GET /index.html HTTP/1.1
+host: engineeringtheinternet.nearlyfreespeech.net
+
+
+GET:  called request method.  most others are used far less (provide diagnostics and modify server state)
+/index.html  think you're asking for.  typically this is a file path, but it can be anything.
+	     it just has to be a string thet the server program knows what to do with.
+HTTP/1.1  says which version of http we're using.
+	  why is this important?  so we know how to interpret what comes after
+rest are headers (in this case request headers).
+well defined set of standard headers.  Some websites will also use non-standard ones
+host:  dns name of website you're trying to reach (can have multiple websites sharing an ip address)
+cookie:  indication of who the user is 
+accept:  what types of files the client will accept back
+user-agent:  what browser you're using (or if you're a web crawler, for instance)
+
+
+========================
+Response spec
+========================
+HTTP/1.1 200 OK
+content-type: text/html
+
+[message body-- in this case html content]
+
+statuses:
+200s:  success.  most common: 200 OK
+300s:  redirects.  301 moved (your browser usually automatically fetches the new site).
+400s:  client errors.  404 not found, 403 forbidden.  429  too many requests (or twitter's 420 Enhance your Calm).  418 I am a teapot.
+500s:  server errors.  500 server error.  501 not implemented.
+
+
+Repsonse headers:
+content-type:  the type of file being sent
+set-cookie:  gives the user a secret string that identifies them
+server:  what software is runnig the server
+
+===============================
+HTTPS -- basically encrypts your http traffic
+can see it as wrapping HTTP in an SSL/TLS packet, providing another layer
+this should probably confuse you more than it clarifies anythnig
+
+
+============================
+demonstration of http using telnet
+read http responses in chrome developer tools
+==============================
+
+
+
+
+

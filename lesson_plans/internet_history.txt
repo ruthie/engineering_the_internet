@@ -1,0 +1,80 @@
+Two questions about each of these:
+*how is information encoded
+*how do we get it to the right destination
+
+
+First communication over wires:
+
+-------------------------------------------------------------------
+
+Two kids with cans and a string between them (who played with these?)
+*produce a signal
+*translate it into something that goes over a wire
+*translate it back
+(used to be called lovers phone)
+transmission via vibration of string
+BRING ONE OF THESE IN
+Things to notice:  
+*distortion in the wire
+*abstraction-- signal in, signal out
+--------------------------------------------------------------------
+
+Telegraph
+kids -> grownups
+sound waves -> electric signal
+
+More important:  DIGITAL ABSTRACTION
+ask students:  what does digital actually mean?  1s and 0s --> contrast to continuous signal on tin can telephone
+
+basically a point-to-point communication technology, although later more complicated systems were built on it
+
+Question:  do you still get distortion?  yes!  what form does it come out as?  switched 1s and 0s.
+--------------------------------------------------------------------
+
+Telephones
+
+"apparatus for transmitting vocal or other sounds telegraphically"
+must have been the coolest thing ever when it was invented
+
+Have you ever seen a telephone switchboard, like in a museum?
+Why do they end up in museums?  Because there are a ton of them and they're not very useful.
+
+circuit-switching network
+Q:  What did telephone operators do?
+A:  litterally connected circuits.
+
+advantages and disadvantages
+
+When you talk on the phone today, 
+
+------------------------------------
+
+ARPANET
+
+computer communication over the telephone network
+had "leased [telephone] lines"
+I don't know exactly what IO hardware looked like
+
+Big idea:  packet switching
+Idea 1:  have a big network of wires, like a network of roads
+each node knows (somehow*) where to send the information to get to it's destination (same way long distance telephone works)
+
+replace people routing phones with machines routing messages
+preface each message with an address
+
+Idea 2:  what if someone hogs the line?
+     break up information into chunks, each of which has adress information prepended
+
+*I don't want to treat this question in full as part of this course, but basically, routers (internal nodes in the network) advertise routes they know to other nodes
+-------------------------------
+
+Modern internet
+
+Q:  how do you get wires into people's homes
+A:  use existing infrastructure
+
+Dial up internet, later cable internet using cable television infrastructure
+
+literally put your phone on a little box and use direct dialling to connect you to your provider
+
+cable internet uses television infrastructure

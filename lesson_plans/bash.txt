@@ -1,0 +1,3 @@
+*shell -- gives user access to a lot of operating system features, like the ability to run programs
+	       *exist multiple possible shell languages for a given os
+	       *word "shell" used in a bunch of contexts

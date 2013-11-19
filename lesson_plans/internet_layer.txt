@@ -1,0 +1,48 @@
+IP Addresses
+=============================================================
+32 bits -> 4.5 billion ip addresses
+bad news: we're running out
+
+MIT has 24 bits of ip address space.  By itself.  16 million ip addresses.
+
+(compare to 48 bits of MAC address.  2^16 times as many MAC addresses as IPv4 addresses)
+
+IPv6 addresses ane 128 bits.
+a little less than 4 quintillion addresses... per square meter
+8 groups of four hex digits
+=============================================================
+Routing 
+==============================================================
+each host has a table.
+
+in each row:
+ip address destination
+mask-- how many high order bits to pay attention to
+next hop ip
+
+
+What if there's a loop?  Then traffic goes round and round.
+We'll talk about how to solve this problem.
+
+
+How do the tables get there?
+mostly, routers "advertise" 
+Routing protocols
+
+=================================================================
+IP packets
+===============================================================
+This is an IPv4 packet
+IPv4 is still what's used most of the time, but the world is moving to IPv6
+
+Up to 60 bytes of header-- usually 20
+
+[draw ip packet]
+
+[dissect ip packet via wireshark]
+
+===================================================================
+Traceroute
+=================================================================
+Sends packets with increasing TTL 
+get back ICMP messages when they are dropped

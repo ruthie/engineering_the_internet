@@ -1,0 +1,48 @@
+*Have an idea of an instruction stream
+*Know that processors do multiple things at once
+*have an idea of what code looks like/concept of code being transformed into an instruction stream
+*io/bus idea (usb = universal serial bus)
+
+Ask for computer parts
+
+Need to talk about:  IO peripherals, bus, hard drive, memory
+
+Zoom in on processor
+
+Layers:
+*machine
+	*arithmetic/and/or/xor/bitshift/multiplication
+	*reads strings of 1s and 0s out of memory and puts them back in
+	*sends and receives 1s and 0s on the bus
+	*which of these depends on instructions --> strings of 1s and 0s it gets from memory
+	*choose it's next instruction
+	*machines often very different
+
+So you'll notice that machines are very
+
+Big idea:  abstraction
+    *we don't need to know how the machine works, just that it responds in a particular way to particular instructions.
+If we're going to abstract over it and never think about it, why do we talk about what the inside of the computer looks like?
+   -failures
+   -performance
+
+*instructions (machine is tightly bound to ISA-- multiple machines can implement the same ISA)
+	      *1, 0 -> high and low voltage
+	      *x86, ARM examples of an architecture- 32 and 64 bit varieties
+
+At this point it should still astonish you that we get anything done ever.  Or maybe it will when you know a little more about how to write software.
+    *we need to view logical chunks of data -- imagine instead of clicking a file, choosing a range of hardware addresses every time you needed a file
+    *programs need to take turns nicely on the processor -- if I write a piece of hard drive, I want a guarantee that some other progrma won't write on the same piece of hard drive
+    *every time you use a peripheral, you need to know it's particular protocol
+
+Solution:  more abstraction
+*os (depend on instruction set but not machine)
+    *file system (logically connected sets of 1s and 0s)
+    *instructions for dealing with peripherals (modules for dealing with new types of peripherals)
+    *allows multiple programs to use the same computer at once
+    *linux, mac OS, windows, some others 
+
+*user interface
+    *clicking things with a mouse
+    *or a shell... which I'll talk about in a minute
+

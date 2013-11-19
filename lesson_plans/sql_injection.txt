@@ -1,0 +1,99 @@
+Talked about passwords as being in a database.  We had a bunch of ways you might get access to the server (swiping the hard drive, getting the sysadmin's password, etc.) and one of the ways we mentioned was something like "remote attacks."  Today we'll talk about one way you might get data from the database from your computer at home.
+
+==================
+Code Injection
+==================
+A way to submit code on a web form that will run on the server.
+This means that it has access that everything the server has access to-- files, 
+
+=========================
+demo
+=========================
+I have an html form.  It multiplies numbers by 2.
+
+This depends on:
+     *the file permissions on that file being permissive
+     *my not checking my input
+     *I used exec, which is not a very good idea
+
+Q: which of these should I do to fix the problem
+A: all of them
+
+=====================================
+SQL injection
+=====================================
+Code injection like I demonstrated is rare, because people don't use python exec, or similar features in other languages.
+However, basically everyone uses databases.  Which are basically all based on sql.
+
+For example, how are you going to select usernames?
+
+something like:
+name = "charley"
+"select pword from users here uname = " + name;
+
+Note:
+to make a successfull attack, you need to:
+   *know or guess database schema
+   *know or guess how the sql command is constructed
+   *It sometimes takes some cleverness to construct a good query	
+Figuring these things out is hard.  You don't get a lot of feedback.
+
+
+===================================
+How do you protect yourself?
+====================================
+Check your inputs
+Luckily, any web framework worth it's salt will do some of this be default
+	 e.g. line breaks should not be allowed
+	 similarly, sql special characters should be escaped
+
+Set file permissions intelligently:  (specific example of privilege separation)
+    idea:  have separate databases for sensitive types of data
+    give the process that accesses one premission to access others
+
+
+================================================================
+Buffer overflows
+
+================================================================
+
+Protecting yourself from malice:
+*If you run Windows, have antivirus software installed and running all the time.
+*don't click on links in spam emails; don't install software from sources you don't trust.
+*pay attention to security warnings your browser (or any other piece of software) gives you.  Don't click through unless you have a reason to believe it's safe.
+*watch out for phishing.  Pay attention to the url bar.  If it doesn't contain what you think it should contain, take note.
+*encrypt your hard drive (or parts of it with sensitive information)
+*don't send sensitive information over anything but HTTPS
+*if you lose your phone, disable it right away.  If you suspect your laptop has been stolen, lock email accounts etc. and change passwords.
+
+===========================================================
+DDOS
+Model:  Splash students when class changes open.
+
+So say that I've rooted a machine.
+I probably want to run something quietly and hide my tracks.
+I'll also probably patch the hole I used to get in, so that other people don't take over my botnet computer.
+Spammers and others rent out botnets.
+
+Lets think about how you'd know you were infected.
+Probably a botnet will leave some files and run some processes on your computer.
+so you can look at the list of installed pieces of software.
+But wait, bot software can modify the program that shows you the list of installed programs!
+
+how do you prevent ddos attacks:
+*use a CDN which are resiliant to lots of traffic
+*throttle requests which you think are part of a DDOS attack
+
+=========================================================
+Other types of attacks:
+
+ddos (closely related to performance stuff we will talk about Thursday)
+     distributed denial of service
+     typically you hire a botnet
+
+trojans (install something extra with your software)
+phishing (people send you sites that look like other sites hoping you'll enter personal information	)
+zero-day attack (involves a previously unknown vulnerability)
+rooting a machine (gives you all the control of it)
+rootkits (tools that people make to help you root a machine)
+buffer overflow (method of rooting a machine)

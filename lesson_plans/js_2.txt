@@ -1,0 +1,31 @@
+Using arguments to functions
+----------------------------
+example:  class website css functions
+change_style = function(filename) {
+    document.getElementById("style").href = filename
+} 
+
+do some examples on fish website
+
+--------------------
+moving things around
+--------------------
+changing position:  need to change positions to absolute first, then you can set them
+
+//need to do this first, then we can change element positions
+document.getElementById(...).style.position = "absolute";
+document.getElementById(...).style.top = x;
+"".left
+"".right
+
+------------------------------
+To do something periodically:
+------------------------------
+window.setInterval(function_name, miliseconds)
+can create an animation!  but it's a little annoying.
+
+//if you do 
+n = window.setInterval(function_name, miliseconds)
+
+//then later you can stop the behaviour with 
+window.clearInterval(n)

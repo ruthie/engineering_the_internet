@@ -1,0 +1,111 @@
+Two performance issues:
+    user experience (latency)
+    server load (throughput)
+
+latency:  min time for any particular thing to happen
+throughput:  number of things that can happen in a given period of time.
+
+want low latency and high throughput
+
+example:  pigeons
+
+example of latency problem:  user clicks, nothing happens for a few seconds
+example of throughput problem:  server cannot serve all users
+==========================================================================
+Things that take a long time:
+sending anything over the network (network latency)
+sending a lot of data over the network (network throughput)
+computation (both latency and throughput, usually worried more about throughput)
+
+==========================================================================
+Javascript front-ends
+	   contrast getting every new page view to having javascript modify the page.
+	   reduces latency
+
+Example:  Splash catalog
+
+Try one:
+    load entire catalogue
+
+Try 2:
+    every time you click on a class, send a request to the server
+    AJAX requests (Asynchronous Javascript And XML)
+    downside:  high latency
+
+Try 3:
+    load catalogue framework
+    one by one load classes, starting from the top and then display them as soon as you get them
+
+Which is best for latency?  Which for throughput?
+
+What about a more interactive page?
+notice:  javascript on your laptop is slower than python on a server.
+
+
+===========================================================================
+Caching
+	browser cache
+		one way chrome is so fast is that it has a very agressive cache
+		use shift-refresh to get new page
+
+	server side cache
+	        some pages are static, stored on the hard drive
+		some pages are dynamically generated
+		in either case, it can take a sec to get the page.
+		have quick memory.
+		     note:  caches exist everywhere.  your computer caches all the data it uses.
+
+		HTTP request headers that help with cache control:
+		     good example:  if-modified-since
+
+		great idea!  Why is it hard?
+			
+============================================================================
+problem 1:  what do you keep in the cache?	
+	fill up the four slots 
+
+problem 2:  cache invalidation
+famous quote:  There are only two hard things in Computer Science: cache invalidation and naming things.
+You have seen how bad computer scientists are at naming things.  I can say with certainty that they are equally bad at cache invalidation.
+variation:  There are only two hard things in Computer Science: cache invalidation, naming things, and off-by-one errors.
+(in practice, off by one errors are not that hard)
+I also don't partularly agree here-- but no one ever said the only two hard things about CS are HTML and SCP
+
+so cache invalidation.
+Say that I have a static webpage.  This is easy-- you can detect when a file has been modified and throw it out.
+Harder:  dynamic websites.
+
+Common case:  you have some template, and you fill it in with data depending on some state.  e.g. splash catalog
+What if that state changes?
+*class is cancelled?
+*more students enroll?
+*what if a room is changed on a class?  (this doesn't show up in the catalog)
+Answer:  often have explicit cache invalidation.  Every time a function is called that changes a page, say page isn't cached.
+
+Workaround:  load a plain HTML page.  Make async AJAX requests.
+
+too strict:  lose point of having a cache
+too lenient:  you may get incorrect data
+
+============================================================================
+
+reducing network latency:
+CDNs:  one example is Akamai
+own a bunch of servers close to where people live
+will serve your website --> money for performance	
+
+dealing with low throughput:
+Reduce the amount of data you send.  How?
+	*fewer images
+	*make images low resolution if they're going to be small
+	*smaller pages (only send users data they want to see)
+	remember:  plain html and css is small.  pictures, music, media are large
+
+=================================================================================
+thinking about performance:
+	 *put your energy in carefully.  If you have a large network delay, don't sweat some processing time.
+	 *be aware of your actual use case.
+	     *common to "benchmark" a piece of software on some load that you make up
+	      better to benchmark on a load that comes from real inputs
+	 
+==================================================================================

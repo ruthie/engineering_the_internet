@@ -1,0 +1,45 @@
+Idea:
+
+*Define functions that have things you want to do
+*attach them to buttons/other things
+
+Ways to attach:
+---------------
+     <button onClick="function_name()">
+     There HAS TO exist a function with name "function_name"
+     give your functions descriptive names.
+
+Defining functions:
+-------------------
+<script>
+	helloworld = function() {
+	  //instructions here 
+	}
+</script>
+
+
+instructions
+------------
+alert("message!"); --> gives message box which says "message!"
+
+more interesting and flexible:  change some attribute of some element.
+How do you reference things?
+
+document.getElementById("element_id") gets an html tag 
+(remember those id tags?)
+
+if you want some attribute of a tag use 
+
+document.getElementById("stylesheet").href
+document.getElementById("element_id").style.color
+document.getElementById("element_id").style.[any css attribute]
+
+you can change any of these using = 
+ex.
+document.getElementById("el_id").style.color = "purple"
+
+===================
+use sample website for several examples
+===================
+make simple button on class website to switch between css
+===================

@@ -1,0 +1,65 @@
+Static case (like my website, your websites):
+http request to server
+server constructs an http response with the file as the body
+Dynamic case
+http requst goes to the server (can be the same http request)
+server uses that request as the input or argument to some computer program
+that computer program returns as it's result the http response to send back
+
+[show fish example]
+[draw fish example on the board]
+
+how do we scale this up to complicated things with persistant data and complicated behavior?
+[draw a complicated structure]
+
+Note:  nearlyfreespeech does not do dynamic websites with frameworks
+All common frameworks require long running processes i.e. program that never stops running, and this is just not really a thing that nearlyfreespeech supports
+===============================================
+Database:
+stores data-- usernames, emails, user information, file locations
+non human-readable data files on a computer
+interface with them using a language (of sorts) called sql (structured query language)
+
+tables-- basically look like spreadsheets with a bunch of columns.  e.g. users table
+columns-- pieces of data, like username
+rows-- items like users
+
+several different options:
+sqlite (fast, resource light, few features)
+
+bigger, more featureful
+*mysql
+*postgresql (elephant logo)
+these both use a client server model
+this is like client server 
+
+demo of sqlite
+
+==============================================
+Frameworks:
+written in a specific language, expect you to write your website code in a specific language
+Two that I see a lot:  
+django (python) -- esp website uses this
+Ruby on Rails (ruby) -- hip kids in San Francisco 
+
+true story: django was developed for my hometown newspaper.
+
+*allow you to swap out databases
+*do all the common things you want them to do
+e.g. have built-in notion of a user
+
+Both of these use a design called model-view-controller (MVC)
+model-- how data is structured
+view-- what you see
+controller-- "behaviour"-- modifications to model
+
+example:  esp website
+*views let you see say, what classes you're in
+*models are for users, classes, programs
+*controllers are e.g. splash lottery
+
+example:  poll 
+*views let you see results
+*models for polls, users
+*controllers for voting in a poll
+================================================

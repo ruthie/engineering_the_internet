@@ -1,0 +1,62 @@
+Cascading Style Sheets
+
+We're not actually going to make them cascade.  But style sheets, yes.
+================================================================
+basics
+=================================================================
+selector { 
+	 property:value; 
+	 property2:value2;
+}
+
+selector is an HTML tag
+
+
+comments look like
+/* comment */
+
+
+selectors
+---------
+html-tags
+#id (#para1)
+
+===============================================
+side note:  using colors
+===============================================
+there's a list of colors you can use out of the box.
+
+Other way to make colors, which is pretty common:
+
+Colors are indicated with 6 hex digits
+encode the amount of Red, Green, and Blue light
+RRGGBB (R=Red, G=Green, B=Blue)
+so FF0000 is bright red.
+All named colors actually do is serve as a shortcut for RGB colors
+Try choosing some colors.
+
+Advantages of using named colors vs. RGB encoded colors?
+===============================================
+Classes
+=============================================
+classes are marked with a "class" tag in the html
+ex: <p class="myclass"></p>
+
+then you can have a selector that looks like
+
+.myclass {
+/*properties and values*/
+}
+
+
+===================================================
+using separate stylesheets
+================================================
+To put style in the html file you use <style></style> tags in the header
+
+copy style information to a separate file, say called mystyle.css.
+
+insert a link tag
+ex.  
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+

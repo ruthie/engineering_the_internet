@@ -1,0 +1,64 @@
+Themes:
+	*vocabulary
+	*computer engineers have odd taste in names
+
+File system *everything is a file*
+     so what's code and what's data?
+bash
+	programs take in some data and spit out some data
+
+Main ideas to get across:
+     *programs and data are both files stored on the hard drive and accessed in the same way
+     *use the command line to navigate around the file system
+     *most programs take in data and spit out data
+     *programs-- code vs. binary files
+
+
+File system!  Is a software construct.  Nothing in 
+     *has root at /
+     *directories contain files and other directories	
+     *we can pretend it's a tree, with the root at the top.
+     	 -real trees have their roots at the bottom.  Why do we draw trees with their roots at the top?  Probably because we start at the top of a piece of paper and work our way down.
+
+bash commands:
+     *ls
+     *cd
+     *cat
+     *touch
+     *mkdir
+     *rm (-r)
+     Some conventions here, but there's no grand plan.  You just need to learn how to do them.
+     *less (this is a program)	
+     *emacs (this is a program)
+
+     grep
+     head
+     tail
+     sort 
+     wc
+     yes
+
+bash commands get (arguments, options), input
+
+jargony words:
+	*buffer
+	*gui
+	*recursive
+
+more advanced topics:
+     	*links
+	
+more bash:
+        *using *
+	*flags and arguments
+
+Shell
+	*how many have used a shell before?
+	*way to navigate, run programs on a computer 
+	*contrast to GUI --> graphical user interface
+	*you'll use a bash shell.  There are other shell scripting languages.
+		-bash on linux and mac
+		-command line on Windows
+		-bash is a language-- you can write any program you want in it.  but you don't.  and we won't.
+	*what you do and don't use bash for
+	*today we're going to use it as a window into the file system and not much else.  We'll learn how to do a bunch of other things with it soon.

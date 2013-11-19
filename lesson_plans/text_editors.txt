@@ -1,0 +1,108 @@
+First thing you must understand about text editors:
+Text editors are the subject of a HOLY WAR.
+Which text editor you use is VERY IMPORTANT.
+
+Comparison of editors:
+according to wikipedia:
+	  vim:  -cross platform -extensible
+	  emacs:  -cross platform -extensible
+
+In reality:  vi/vim is a little faster than emacs, emacs has more features
+in the grand scale of things, they're both occupy basically the same place between ed, which does nothing, and IDEs, which are mindbogglingly resurce intensive.
+
+================================================================
+What's the most important thing to be able to do in a text editor?
+A: save and quit
+
+Nano:  ctl-o to save, ctl-q to quit (default on a lot of linux machines)
+Vim:  :o to save, :q to quit (another very common text editor)
+================================================================
+
+Using emacs:
+$ emacs [filename]
+opens a file
+on many systems this opens graphical emacs-- use -nw to get command line emacs
+
+advice:  you can learn command line emacs using graphical emacs-- just try not to use the mouse! and then when you're stuck and everything is terrible, you can fall back on the mouse.
+
+emacs uses lots of "modifier keys"
+ctl (control key)
+esc (escape key)
+
+========================================================================
+ctl-x ctl-s to save
+ctl-x ctl-c to quit
+ctl-x ctl-z to stop but not quit
+
+woah, what does that do?  backgrounds the process.  You can bring it back by typing fg.
+I can have multiple things backgrounded, find out what they are using the "jobs" command
+[demonstrate]
+the advantage here is that you don't have to wait for emacs to start over and over, and you can keep 
+
+============================================================
+Getting around, cut and paste
+
+use arrow keys
+ctl-v to scroll down, esc-v to scroll up
+ctl-e to move to the end of a line, ctl-a to move to the beginning
+
+to cut a single line use ctl-k (cuts everything to the right of the cursor)
+to paste something, use ctl-y (y stands for "yank")
+
+highlighting region:
+go to the beginning of the space you want to highlight
+ctl-space to start highlighting
+you finish highlighting when you type a command:
+    ctl-w for cut
+    esc-w for copy
+
+ctl-x u undoes things
+
+==========================================================
+gedit and other graphical editors have tabs-- there is an equivalent here.
+
+vocabulary:  
+buffer-- an open file
+	 I can open a new buffer using ctl-x ctl-f, and then typing the name of the file.
+	 ctl-x b, then type the name of a buffer switches between buffers
+	 hint:  use tab complete.  press tab, and you'll see a whole list of the buffers you have open.  Once you choose one and open it, the list will go away.
+	 I can close a buffer using ctl-x k
+
+window-- an area to view an open file
+	 I can create a second window using ctl-x 3, delete the window my cursor is in using ctl-x 0
+=====================================================================
+why emacs is awesome
+-------
+
+has lots of cool features.  I'll show you one: keyboard macros
+F3 to start keyboard macro (note:  mac users may have to toggle some settings or use shift-F3 to get F3)
+
+F4 to stop defining macro or to replay a defined one
+
+ctl-x ctl-k r applies macro to every line in the region
+
+You can also use F3 while defining a macro to add a number that increments every time you execute the macro
+
+=====================================================================
+learning:  
+
+*you can use graphical emacs while you learn, so if you get stuck, you can use your mouse to get out, but all the key combinations will still work.
+*read the manual.  No really, it's great reading, and you'll learn a lot
+*if you think emacs has a feature, it probably does, or at least someone's written an extention that does it
+for example, emacs can:
+    *find-replace
+    *spell check
+    *macros which will wait for you to type something, or approve execution
+    *edit a keyboard macro
+    *auto-save and recover
+
+=======================================================================
+last thing (you will like this thing)
+I was perusing the emacs manual looking for cool things to teach you, and I ran across something that I should have guessed emacs did.  You can edit a remote file in emacs.
+
+when you find the file, find it with:
+/username@hostname:filepath
+ex.
+/ruthie_engineeringtheinternet@ssh.phx.nearlyfreespeech.net:/home/public/index.html
+
+It will prompt you for a password and take some time to open the file, but once it's open, you're set.

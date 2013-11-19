@@ -1,0 +1,50 @@
+Already know how to:
+--------------------
+*write a function
+*attach it to a button
+*give your function arguments
+*change position of an element
+*do a thing periodically, stop doing it periodically
+*declare a variable
+
+Today:
+------
+*modifying html content
+	   document.getElementById("bla").innerHTML = "write what goes in the tags here"
+	   document.getElementById("bla").appendChild(node)
+	   
+	   appendchild requires a node--
+	   create a node using document.createElement("tag") <- no angle brackets, just the tag name
+
+exercise:  use only javascript to create the body af a page.
+
+*loops
+for(var i = 0; i < 10; i++){
+	//more javascript code
+}
+
+while(i < 10) { 
+	// more javascript code
+}
+
+
+*if statements
+if(i < 10){
+}
+
+exercise:  make a multiplication table programmatically (you should have two loops, one inside the other)
+
+----------------------------
+How to learn more javascript
+----------------------------
+clearly I have not listed all of the things you could ever want to do
+Javascript does lots of things, some are more complicated than others
+
+Javascript resources:
+*www.w3schools.com/js
+*go to a page that does the thing you want to do and look at it's javascript
+    use chrome developer tools -> sources tab to find javascript source
+        chrome developer tools -> elements tab to look at HTML
+*use javascript console to test new javascript (chrome developer tools -> console)
+*google the thing you want to do and see if anyone on the internet knows how to do it
+

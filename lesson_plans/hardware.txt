@@ -1,0 +1,43 @@
+Hardware
+
+Ask for parts of a computer
+
+Hardware vs. Software
+	 *if you can touch it, it's hardware
+	 *if you program it, it's software
+	 *most of what we'll talk about in this class is software
+	 *software is really subject to what hardware can and can't do
+	    -we've abstracted over a lot of things, so you can write software, even good software, without thinking about hardware constraints
+
+Hardware
+*hard drive
+*processor
+*memory
+*io devices:  most are optional!
+       -keyboard
+       -mouse
+       -usb ports
+       -ethernet port/wireless card
+*bus
+
+Processor:
+	*arithmetic/and/or/xor/bitshift/multiplication
+	*reads strings of 1s and 0s out of memory and puts them back in
+	*sends and receives 1s and 0s on the bus
+	*choose it's next instruction
+	*machines often very different
+
+32 vs. 64 bit
+processes 4 vs 8 bytes at a time
+
+Of particular interest to this class are peripherals, particularly network
+Most computers have a network card.  
+     *another peripheral io device-- looks like a keyboard + text display to the computer
+     *implements data link layer circuitry -- takes ones and zeros and turns them into voltages on an ethernet cord
+
+At this point it should astound you that we get anything done at all.
+   *Although all computers have same basic components, they look /very/ different
+   *Ton of unstructured information
+
+
+

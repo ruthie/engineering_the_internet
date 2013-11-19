@@ -1,0 +1,115 @@
+Websites:
+     *html -- website content (headings, words, pictures)
+     *css -- website appearance (what colors, fonts, backgrounds, arrangements, borders)
+     *javascript -- website behaviour (things that move, change when you mouse over them, calculate things)
+
+What we use for what we call a "static website." (kind of website you'll make)
+Contrast is to a webapp
+
+HTML/CSS are "kind of human readable"  -- contrast to ip packets which are just not human readable
+	 *human readable because they have to be human writeable
+Javascript is a programming language meant for use inside web browsers
+
+
+=================================================================================
+Web Browsers
+=================================================================================
+what is a browser:
+     *retrieves and displays information
+
+     *these two functions are independent  -- 
+     	    several protocols (mostly file, http, and https)
+	    several types of content (ask for types of content-- html, pdf, wav files, txt, etc).
+     *example:  show a music file on my computer, and one on the internet
+
+
+     *familiar internet content "websites" is written in html/css/javascript
+
+
+     *conceptual question: do all browsers have to interpret these the same way
+	   can you think of an example (smartphone browsers)
+	   (to make life more confusing, sometimes websites send different data to smartphones based on the user-agent http header)
+	   show students lynx
+	        cool facts about lynx:
+		1.  oldest web browser that anyone at all still uses	
+		2.  still younger than me, but not younger than you
+		3.  it was developed in my little hometown in Kansas
+
+	   	can you think of a situation in which lynx would be useful?
+		answer:  command line hipsters and people in ssh sessions
+
+	   what's your favorite website?  Let's look at it in lynx.
+
+     *do we want all websites to interpret information the same way? yes, it's a huge pain when they don't
+	   *ie and trailing commas
+	   
+     *browser graph
+	question:  how did they gather this information?
+	answer:  user agent headers
+
+===============================================================================
+===============================================================================
+websites work like this
+Separation of responsibilities:
+	   *html for content
+	   *css for appearance
+	   *javascript for behavior
+
+question:  do you need javascript for a website? no
+	   css?  no 
+	   html?  yes, although you have some html that basically only includes links to javascript
+	   
+all this information is in sort-of human readable form.
+browser interprets all that information.
+
+
+
+
+===============================================================================
+HTML
+===============================================================================
+
+html:  structured information about page content
+
+hypertext markup language
+conceptual question:  is html an ip suite protocol:  no.  it's a type of content distrip
+
+Let's write an html page.
+
+Header
+================
+<title></title>
+add header wrapper -- why?  because
+also, still with the headers?  Yeah, everything has a header. 
+
+Also where we put css and javascript.  And some other stuff.
+
+<script type="text/javascript"></script>
+<link>
+
+Body
+===============
+<body></body>
+add content
+tags to use:
+<h1><h2><h3>
+add two lines of text separated by a blank line.
+<p>
+<br>
+Question:  why would you use <p> tags, instead of the <br> tags?  -- can customize appearance
+
+<div>
+<img source="something">
+<a href=></a>
+<input>
+
+Inline information like src= for pictures
+
+html pages to show:
+*purple.com
+*crouton.net
+*pages that students suggest
+
+
+
+

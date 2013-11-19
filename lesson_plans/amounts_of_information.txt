@@ -1,0 +1,66 @@
+1s and 0s
+
+binary:  numbers in base 2 (usually count in base 10)
+count a little in base 2:
+1
+10
+11
+100
+101
+...
+
+We use binary because we can do it with only 2 digits.
+But it's not very compact.
+(you can also count in base three: 1, 2, 10, 11, 12, 20... slightly more compact )
+(there's an explanation of how this works here: http://www.purplemath.com/modules/numbbase.htm)
+
+In practice, you don't convert to regular base 10 numbers very often.
+Binary strings are very often not meant to be interpreted as numbers.
+
+We're going to talk a lot about data/information
+all that data we're talking about is 1s and 0s
+(more later on how it's stored, what it represents)
+talk today about how we measure and talk about data
+
+bit							     1 or 0
+byte			8 bits			instantly    1 letter
+kilobyte	kB	1000 or 1024 bytes	instantly    half a page of text
+megabyte	MB	10^6 or 2^20		1 second     4 megapixel JPEG image (typical photo), music file 5 megabytes, movie has ~700
+gigabyte	GB	10^9 or 2^30		15 minutes   USB sticks, 8-64 gigs-- typical RAM
+terabyte	TB	10^12 or 2^40		10 days	     typical $80 backup drive, probably ~2 times the size of your computer hard drive
+petabyte 	PB 	10^15 or 2^50		-	     a little more than what LHC produces in a month, a little less than the amount of storage WoW uses, about the amount of data google processed per day in 2009
+
+Sometimes we'll have occasion to write bits and bytes out on the board.
+
+Hexadecimol numbers:
+numbers in base 16
+
+Problem:  we only have 10 digits, but we need sixteen
+Solution:  use A, B, C, D, E, and F to make up the difference
+Hex digets:  4 bits (1-9, A, B, C, D, E, F)
+    more convenient than binary because it's readable
+    more convenient than decimol because lines up with byte boundaries
+    
+written like: 0xA1C3 or 0x10 (for example)
+to distinguish things like 10 from 0x10 or 0b10    
+Hex more compact than  binary but uses more symbols
+
+Joke:
+3x12 = 36
+2x12 = 24
+1x12 = 12
+0x12 = 18
+
+
+How do you convert hex to binary to decimol?
+hex to binary:  simple replacement-- 
+0x0=0b0000
+0x1=0b0001
+0x2=0b0010
+...
+0xF=0b111
+
+In general:  use base-conversion method
+sum digit-value * 2^digit-place, places are zero-indexed
+
+Again, you don't actually have to do these very often

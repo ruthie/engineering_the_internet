@@ -1,0 +1,68 @@
+Ethernet
+
+packet structure used for wired and wireless
+
+packet structure
+       ethernet frame: 2000 bytes (2 kilobytes)
+       preamble & SFD-- tell how fast the clock goes (0x55 0x55 0x55 0x55 0x55 0x55 0x55 0xD5) 
+       DST and SRC addresses (MAC addresses)
+       length/type (how do I know if it's a length or a type)
+       tags (do stuff)
+       data (+ maybe padding) min 48 bytes
+       FCFS (checksum)
+
+Need a gap.  Why?       
+
+MAC address:
+    *belongs to NIC, piece of hardware in your computer
+    *6 bytes
+    *who gives these?  The manufacturers
+    *why are they not the same as ip addresses?
+    *show mine
+
+all this is usually implemented by dedicated hardware in NIC
+
+--
+Media Access Control
+      having a conversation-- who gets to talk
+      HW-- time division multiplexing vs. csma/cd for a couple of situations
+
+Physical structure
+	 originally-- a wire connected to multiple computers
+	 now we don't usually litterally do that.  We have switches (show switch)
+
+Simplex vs Duplex vs 1/2 duplex ethernet (why would you ever name a thing this way?)
+
+Carrier sense multiple access w/ Collision Avoidance
+
+1.  you can tell whether someone else is transmitting
+1.5 you can tell if there's a collision
+
+(there are a bunch of these, I'm building up to the one that was used, and is used for wireless)
+
+Naive idea 1:
+Transmit whenever the medium is free
+If there's a collision, stop transmitting and transmit the next time the medium is free
+
+Problem:  everyone tries to transmit at once and then retries at the same time
+
+Naive idea 2:
+When the medium is free, transmit with a particular prbability p
+
+Problem:  how do you choose a p?  no p is good for both a small number of users and a large number
+
+Getting less naive:
+each nic i has a probability pi that it stores
+transmit with probability pi when the medium is free
+if there's a collision, decrease pi, if there's not, increase pi
+
+Things to notice:  this is way less than 100% efficient.
+
+Advantages:  flexible, doesn't reach the no one can transmit stage
+Disadvantages:  still pretty inefficient
+
+
+--
+Min size:  you need your frame to reach every other transmitter before you stop transmitting
+
+Min time between frames:  have to wait until the frame has reached everyone on the network

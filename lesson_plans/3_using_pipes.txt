@@ -1,0 +1,66 @@
+Yesterday we mucked around
+
+Today let's formalize more of what we did
+
+1.  most commands are programs*
+*ones that aren't are part of bash-- ex. logout
+When you run them, bash finds an executable file, and runs that executable file
+
+this means you can install new programs!
+
+show /bin/ls
+it's a bunch of binary machine instructions!
+
+Demonstrates the awesome big idea about modern computers:
+in "stored program" computers
+programs are data, the same way your pictures are
+this means that we can program computers by typing things instead of with punchcards
+everything is a file.  Everything ever.
+
+
+2.  structure of a command
+
+command (options and arguments) 
+
+Input and output-- by default input comes from the keyboard ("standard in", stdout) 
+and goes to the terminal ("standard out", stdout)
+
+we've used cat
+(remember what it does?)
+it can also take input
+try running just "cat" with no arguments
+--> takes whatever you type and prints it to the command line
+note:  what you type and what it gives you are interleaved, but they are actually part of two separate files, stdout and stdin
+We can demonstrate this by choosing to replace those with other files, or input from other sources
+
+3.  How do we give input from other sources? (called redirecting)
+Way 1:  carats
+cat < test.txt 
+replace standard in with the thing after the <
+
+cat test.txt > test_2.txt
+replace standard out with the thing after the >
+
+gives us a simple way to write to files:
+echo > test.txt
+type until you're done, then type control-d (end of file symbol)
+or you can use something like echo hi > test.txt
+
+Way 2: pipes
+use output from one program as input to another program
+for example echo hi | cat
+equivalent to: 
+echo hi > temp.txt
+cat < temp.txt
+
+easier to see what's going on when you have a program that does something more complicated.
+take less, less is a program that displays files so that you can scroll through them.
+(like a lot of programs you can also use less to view a file by typing 
+less test.txt)
+
+let's do useful stuff with this.
+
+great command grep -- searches for strings
+can type grep -r cat | less to look at results in less (for example)
+
+some puzzles on your homework for how to do exciting things in one line of bash using this redirect idea

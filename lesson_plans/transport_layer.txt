@@ -1,0 +1,75 @@
+=======================================================================
+Reliability
+=======================================================================
+
+Goal:
+use "best effort" internet layer to build a reliable network
+
+reliable means:
+	 *packets all arrive	
+	 *no multiples
+	 *packets arrive in order
+For this, we're going to let "arrive" mean "arrive at the application"
+
+Idea:  When the recipient recieves a packet, it sends a message to the sender called an "ack"
+       So the sender knows that the packet arrived
+
+Question:  what if you don't get an ack?  Does that mean the packet didn't make it?
+	   No
+	   ack could be lost.  Ack could even just be delayed.
+
+First try implementation (stop and wait):
+      send packet 1
+      wait for the ack.
+      	   if the ack arrives, send packet 2
+	   if the ack doesn't arrive, resend packet 1
+
+Question:  how long do you wait?  kind of a tough question
+	   *TCP continually calculates an average RTT
+	   *does it choose the average?  no-- it chooses something bigger
+
+Second try:  sliding window
+what if receiver can't recieve fast enough
+
+Better yet:  sliding window with adjustable size
+
+==========================================================================
+Connections
+==========================================================================
+Bit more straightforward:
+Luckily, it's this part and not the reliability part that you'll have to think about often
+
+General idea:  each host has "ports"
+these are addresses, not pieces of hardwar.
+
+16-bit port number (so there are 2^16 ~ 65,000 ports)
+Some are "well known"
+ex. 22 is for ssh, 80 for HTTP
+
+Other times, you just allocate a port for a connection.
+ex.  http servers choose a port for every connection
+
+ip + port number is an address --> called a "socket" (again, no physical piece of hardware)
+ip is like a street address, port is like an apartment number
+
+anyone who's doing their project on an application layer protocol can try to look up which ports it uses
+
+Setting up a connection:
+first thing you send to a new connection is just "hey, I want to set up a connection"
+called handshake
+this one is a "three way" handshake-- three packets, not three parties
+
+=================================================================
+Packet setup
+=================================================================
+
+2 bytes of source port
+2 bytes of dest port
+(note-- no ip addresses.  Why not?)
+seq number
+ack number (expected next ack
+2 bytes of miscelaneous options
+2 bytes of window size
+2 bytes of checksum
+2 bytes of urgent pointer (not usually used)
+variable numbers of options

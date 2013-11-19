@@ -1,0 +1,58 @@
+TCP/IP:  layered protocols
+
+Ideas: 
+Definition of a protocol
+Packets wrapped in other packets.  Don't care what inner packets do from point of view of outer packets.
+What various layers do
+
+other:
+Not everything falls into a layer.
+Tool for thinking about the system.  Reality is more complicated.
+Use wireshark to unwrap some packets and see what's inside?
+
+
+Protocol:  set of rules for communicating within a computer system
+-syntax and semantics
+-formally defined
+-you can think of them like the rules for writing any computer code (or using the command line)
+-we'll see lots of examples tomorrow
+
+1.  general idea:  
+have different protocols for dealing with different functions
+wrap one protocol inside of another
+
+We talked about packets-- most packets have headers and a payload-- which is another packet
+
+encapsulation-- we don't know what's on the inside
+
+2.  
+advantages of layering scheme
+-- only have to worry about one part of the system at a time
+-- independence of different layers-- can choose the most appropriate protocol at each layer
+
+disadvantages
+-- not always efficient (might have to have some pieces of information in multiple layers)
+
+3.  descriptions of actual layers
+3a. link
+one "hop"
+ethernet, wireless protocols
+how do you share a "medium"
+
+3b. internet
+ip addresses
+"best effort network"
+
+3c. transport
+TCP
+-- reliable delivery
+-- error checking
+-- encryption
+-- an idea of a connection, (multiplexing)
+-- in order delivery
+UDP  some subset of the above 
+
+
+3d. application
+HTTP
+SSH

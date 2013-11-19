@@ -1,0 +1,5 @@
+1.  collect homework (and questions)
+2.  networking history
+3.  layered protocols
+4.  demonstrate wireshark
+5.  talk about research project

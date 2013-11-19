@@ -1,0 +1,150 @@
+This lecture is on Design Philosophy.
+What does that even mean?
+
+If you go into computer science, as a college student, you'll have three or four lectures where the professor gets up there and spends an hour trying to scare the pants off of the class by showing them some complicated problem that the students are able to understand but not able to solve yet.
+
+For me this was like 
+    *multithreaded programming (what you do if you have multiple processors)
+    *computer architecture for people writing compilers
+    *javascript sandboxing
+
+Right now we're writing HTML pages.  Putting them on the internet.  And that's hard.  But the good news about that, is once you've done it a couple times, it will get way easier.  That's not true of everything.  
+
+Some things will stay hard forever.
+
+This is the teaser for that part of computer science.  It's 
+     *hard
+     *interesting
+     *if you solve one of these problems pretty well most of the time you can make a lot of money or become a well respected academic
+
+What we're going to do is that I'm going to try to convince you that making websites is way more complicated than you already think it is.  And then I'm going to talk about how we deal with some of that complexity.
+===================================================================================================
+Premise:  the difficulty of making a system that works gets way harder the more parts you add.
+
+Why:
+	*Emergent properties:  
+	          example:  how my friend gamed the Harvard rooming system:
+		  	    I have a friend who goes to the liberal arts school up the street.
+			    People in charge aren't computer scientists, so they weren't very careful about their rooming system.
+		  	    lottery and a group system.
+			    group system:  form groups, and can also merge and split groups at any point
+			    lottery:  groups and individuals get a number
+			    if you merge groups after the lottery, your group gets the unweighted average of the two groups
+			    ex.  say I have two groups, each with two people, one has number four, one has number 2.  They merge and get 3
+			    now say the group with number 2 had two people and the group with 4 had 14.  They can still merge and get the number 3
+			    How do you game this?  say you have 16 people.  Form 8 groups of two, and merge in the right order.
+			    
+		  example CRIME
+		  CRIME was a way to get the decrypted value of a cookie in an encrypted packet
+		  it wasn't a property of the compression system per se, or the encryption per se, but of their interaction
+
+    	*propagation of affects:  (butterfly affect)
+		  malaria in Borneo
+		  Spray with DDT
+		  lizards eat insects with DDT in them
+		  cats eat lizards
+		  cats die
+		  rats reproduce--> lots of rats
+		  rats carry other diseases
+		  WHO parachutes cats into Borneo
+
+		  (side note:  is this story true?  A: fact checkers would also really like to know.  But it illustrates the thing we're trying to show here)
+		
+	*incomensurate scaling-- you change one parameter, other parameters change by other amounts
+	       how many of you have younger siblings?  Do they like to climb things?
+	       I used to shimmy up this door at my house.  It was super easy, I could hold my weight by pressing against the sides of the door.
+	       I can't do that any more.  I'm way stronger than when I was 6.
+	       but I also weigh more.
+	       See also:  elephants.  Big huge legs.
+
+	       Say you have a static website with three pages.
+	       Each page links to each other page
+
+	       Another example:  remember Yazi's presentation on DNS?  How in the early days of the internet instead of having the DNS lookup system, each computer just had a hosts.txt file?  But that didn't scale.
+	       
+===========================================================================================================
+	
+You have to make tons of choices that may affect the whole system.
+Choices are hard.  People want to think less.  There's tons of research on this.
+
+Design philosophies:
+       *10,000 foot view of web design (or computer system design in general)
+       *designers look for patterns, construct ways of looking at the system that brings out those patterns
+
+
+How do you then design for it?  Ways to think about creating an overall design that you can then just apply to figure out the details.
+
+Some of these come and go with fashion.
+
+Design philosophies make it easier.  Instead of having to think out every choice, you look at what your philosophy says to do and do it.
+
+=============================================================================================
+Client/server model:
+	      so useful that it's used even when you don't have multiple computers
+
+Server provides some service.
+Client requests that service.
+
+web servers 
+file servers
+early window systems worked on a client/server model
+
+=============================================================================================
+Remote Procedure Call (RPC)	
+
+SOAP style:
+
+design APIs (basically functions) to be accessed over the internet.
+
+example: facebook:
+getNewsFeed
+addPicture
+addFriend
+
+advantages:  can be used over protocols besides HTTP.  Code reuse when you have things that want to be accessed from multiple interfaces.
+example:  I did an analysis of the MIT printing system once.  It involved a SOAP interface that could be accessed from a web interface or via a script on your computer.
+==============================================================================================
+Actually, not what everyone is doing these days.
+Philosophies come and go, and temporarily become fashionable.
+My friend:  "dude, you should teach them about js-fronted, RESTful/RESTy API backend, that's what all the cool kids are doing these days"
+
+
+
+REST:  we can understand the internet better by saying that everything is a resource.
+
+everything on the internet is a resource.  Y'all's /index.html pages are resources, pictures or facebook are resources, the ESP website is a resource.  People using the web can access resources or create or modify resources.
+
+
+Use HTTP methods:
+       We've talked about GET, HEAD
+       use GET to fetch resource (like a picture of a cat, CSS stylesheet, whatever)
+       to create, or modify a resource (say, put a picture on facebook), you can use PUT, POST, DELETE
+
+add a picture 
+
+POST /pictures HTTP/1.1
+Host: blablabla.com
+
+[picture file]
+
+would add a picture
+
+Conceptual question:  is your website RESTful?  Answer:  yes.  static sites are trivially RESTful.
+
+Advantages:  
+*reuses HTTP features (permission control, caching features that make the internet go fast).  No wheel reinvention!
+*brings out similarities between different applications.
+*simple, well understood architecture allows clients to use it well more easily
+
+Disadvantages:  
+requires HTTP
+Not actually a good model for the whole internet?
+Take some examples:
+     *facebook -- pretty good fit
+     *esp website -- ok fit.  
+     	  Classes are resources.  
+	  What when someone enrolls?  Well, then the enrollment is a resource
+     *printing system  -- you need a call to release something from the printer.
+     	       that's not really a resource.  You can put the print command in an HTTP post request, but you lose the advantage of having a good model
+
+==============================================================================================
