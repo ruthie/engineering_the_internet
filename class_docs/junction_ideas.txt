@@ -1,0 +1,107 @@
+Topics to (possibly) cover:
+packet switching vs. circuit switching networks
+arpanet
+end-to-end delivery
+medium sharing
+stop and wait/sliding windows
+TCP
+routers
+IP
+DNS
+HTTP
+character encodign
+what dialup internet was actually all about
+security
+HTML/CSS/Javascript
+ajax
+Server-client architectures
+MVC website architecture
+
+
+tools:
+wireshark 
+
+
+-------------
+Overall themes:
+
+Engineering (explicit):
+what makes a good protocol?
+what makes good code?
+good:  what are our goals and how do we best acheive them?
+
+Navigating abstraction (implicit):
+What can I do when I don't know everything about a system?
+     where can I find documentation?
+     when am I allowed to make guesses?
+     how do I do detective work to debug a problem?
+
+
+Computing primitives:
+os (unix)
+files
+code
+processes
+io types
+using bash
+
+
+Navigation:  OMG how do you address everything in the internet?
+
+Addressing and Routing:  
+Day one:  simple version
+Days two, three, four:  the real world
+ip
+nat boxes
+ipv6 (tunneling)
+dns
+
+
+URLs 
+HTTP requests
+How are HTTP requests resolved?
+
+My model for this is the group of friends I took 6.004 with while we were working on our betas.  We had a mailing list and were intermittently chitc
+
+Servers:
+What does a server do?
+     note all the flexibility this gives us!
+can we write a simple server in class?
+ports
+
+
+
+The internet in the browser
+Making things users want to use
+*Overview:  what are the moving parts and how do they work together?
+*Project:  build a simple website
+*What are the major engineering considerations?
+      
+*Iterate
+*High level question:  this is built on abstractions.  Where do we need to break through those
+      in general:  performance
+      	 	   e.g. caching
+
+
+HTML:  succinctly encoding how things should look
+Javascript:  manipulating HTML
+	     notice what javascript has as primitives
+	     exercises:  simple color switcher
+	     		 making things turn
+Ajax:  
+History of the internet-- 
+first?
+	get to discuss simpler iterations of the internet first
+
+leave this for last? (for a sub?)
+	then students can match the things they've learned about to when they were developed
+
+interweave it?
+	learn a lot about engineering by talking about how things were developed
+
+
+
+Research on application level protocols?
+Will we talk about peer-to-peer systems (usenet, bittorrent)?
+
+Random awesome reading sections?

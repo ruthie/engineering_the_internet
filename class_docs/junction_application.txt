@@ -1,0 +1,7 @@
+300 words on classroom environment:
+
+My overall goal is to create a class that introduces students to computing in practice, including students who have very little experience in computing in general.  I want it to move fast, and to feel like a lot is being accomplished (which will make it feel rewarding), but not have a high entry point.  
+
+Furthermore, I want it to be not only accessable to beginners, but also welcoming.  If beginners are understanding everything, but still don't think they're doing as well as their peers, they'll probably find that discouraging.  I've chosen material that I think will be unfamiliar even to students who have the sort of computing experience typical of high school students (programming courses, robotics teams).  I also want to cultivate a collaborative mood among people doing individual work.  That means that while each person does their own work on aech project, students help each-other when they're stuck.  
+
+I think the feeling of individual accomplishment coming out of a class like this will encourage students to go on in the area, but if they feel that their individual accomplishment isn't as good as someone else's, they'll be discouraged.
