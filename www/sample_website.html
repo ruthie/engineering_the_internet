@@ -1,0 +1,31 @@
+<head>
+  <title>Fish</title>
+  <!-- CSS and javascript links go here too-->
+  <link rel="stylesheet" type="text/css" href="sample_style.css"></link>
+
+  <script type="text/javascript" src="fish_javascript.js"></script>
+</head>
+<body>
+<p><input id="fish_button" type="button" style="position:absolute;" onClick="start_button_moving()">Do not push.</input></p>
+<!--p><input type="button" onClick="move_right()">Move right.</input></p-->
+<!--p><input type="button" onClick="move_left()">Move left.</input></p-->
+<p><input type="button" onClick="make_fish_opaque(0, 'breadfish')">Clear.</input></p>
+<p><input type="button" onClick="make_fish_opaque(document.getElementById('opacity_box').value, 'breadfish')">Opaque.</input></p>
+<p><input type="button" onClick="make_fish_opaque(1, 'breadfish')">Not opaque.</input></p>
+<div id="text">
+  <p class="comic-sans">
+    Cats like fish.
+  </p>
+  <p class="comic-sans">
+    You need fish to make sushi.
+  </p>
+  <a href="bread.html">Bread</a>
+</div>
+<img id="breadfish" src="http://24.media.tumblr.com/tumblr_m9rdsj6kwC1ry41wlo1_500.jpg"></img>
+
+<p>Use breadfish to make <a href="http://crouton.net">croutons</a>.</p>
+
+<p><input type="text" id="opacity_box">Do not type.</input></p>
+
+<img id="otherfish" src="http://upload.wikimedia.org/wikipedia/commons/7/77/Puffer_Fish_DSC01257.JPG"></img>
+</body>
