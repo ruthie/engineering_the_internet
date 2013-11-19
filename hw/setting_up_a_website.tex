@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\title{Using NearlyFreeSpeech.net}
+\date{}
+
+\begin{document}
+\maketitle
+\section{Setting up a Website}
+To create a new site, go to the Sites tab, and click on ``create new site'' in the box on the left and follow the steps.  The second step asks if you want to specify additional names.  You can answer ``no'' for the moment (and change this later if you want to).
+
+\section{Accessing a Website}
+
+Look at your site information.  You can find it by logging in, clicking the ``sites'' tab, and then clicking its short name, or at the url 
+\begin{center}
+\texttt{https://members.nearlyfreespeech.net/[username]/sites/[sitename]}.  
+\end{center}
+
+The second box is labelled ``FTP/SFTP/SSH Information''.  From this box, note the username and SSH/SFTP Hostname.  These are your {\bf SSH} username and SSH/SFTP Hostname.
+
+\section{Important Information}
+Fill out the following information for your reference.
+\begin{enumerate}
+\item NFS username
+\item sitename
+\item SSH/SFTP Hostname
+\item SSH username
+
+\end{enumerate}
+
+
+\section{Accessing your hosting space}
+
+You can access the your space only using command line interface via a tool called \texttt{ssh}.
+
+\subsection{Mac or Linux}
+
+In a terminal type the following command: 
+\texttt{ssh espuser@athena.dialup.mit.edu}
+
+You should be prompted for a password.  The password is the same as your NFS password.
+
+You should now have a shell on an NFS computer that you can use like an in-person shell.  
+
+When you want to exit, type the command \texttt{logout}.
+
+\subsection{Windows}
+On Windows, you need a special SSH client called ``PuTTY.''  It can be downloaded from 
+
+\texttt{http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html}
+
+Once you install it, you should get a box with a bunch of options.  Enter the hostname where your site is in hostname field, then click ``connect'' or ``go'' or whatever the button says (I don't have this in front of me since I don't have a Windows computer at home).
+
+
+You should get a separate popup box which will give you a chance to enter a username and password.  Username is the username they tell you, password is the same as your nfs password.  Note that you won't see any characters appearing as you type your password, but it's still being entered.  After that you should get a shell that's equivalent to the purple Terminal window on an Athena machine.
+
+
+\section{Posting Content}
+To post content, you will use a tool related to \texttt{ssh} called \texttt{scp} to move files to your hosting space.
+
+\subsection{Mac or Linux}
+
+To post content, you will use \texttt{scp} to move your completed html, css, and javascript files to the \texttt{public} folder on your hosting space.  Anything you put in that will be possible to get via HTTP.  I recommend starting by creating a page called \texttt{index.html}.  This will be the default page that a web browser takes you to when someone goes to your website.
+
+SCP is a command line tool, and the syntax is as follows:
+
+\begin{center}
+\texttt{scp [local file path] [username]@[host]:[destination folder]}
+\end{center}
+
+So when I'm moving files I type into my terminal:
+\begin{center}\texttt{scp file.txt ruthie\_engineeringtheinternet@ssh.phx.nearlyfreespeech.net:/home/public}\end{center}
+
+\subsection{Windows}
+%%%%%%%%%%%look this shit up
+On Windows, you again need separate software, called PSCP availabale from the same website as Putty.  PSCP is a command line program, so you'll need to download the program, change directories in your command line to the folder containing PSCP, and then type the same syntax as for mac and linux, but substituting \texttt{pscp} for \texttt{scp}.
+
+\section{Advice}
+
+When working on your website, do your work locally, testing in your browser by typing \texttt{file://[absolute path to your file]} into the url bar.  Then, when you are happy with your work, move it to your hosting space using scp.  It's easier to test locally, and then when you make a mistake, only you see it.  Never change the files when they are already in the hosting space.  If you do so, your local copies will get out of sync, and you may lose content, or have to merge it with changes you make locally.
+
+Make periodic backups of your local work by copying the folder containing it somewhere else.  This prevents you from accidentally deleting your work, or messing up your work and not remembering how it was before.  A particularly good time to make a backup is before making a major change to your website.
+
+\end{document}

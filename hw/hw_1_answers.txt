@@ -1,0 +1,8 @@
+5. (one possible set, many exist, most will be similar to this)
+
+a.  ls -l /etc
+b.  ls -l /etc | grep .conf
+c.  ls -lrS /etc
+d.  ls -l /etc | head -n 5
+e.  ls -lrS /etc	| head -n 5
+f.  ls -lrS /etc | grep .conf | head -n 5

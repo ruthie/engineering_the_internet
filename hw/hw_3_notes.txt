@@ -1,0 +1,4 @@
+For 1c, sending the HTTP request to get the class website without the host header
+What's wrong with this request? -- missing enough information for nfs to find the website, since it won't get the part that includes the hostname.
+I get an HTTP 200 with a message from nearlyfreespeech.
+A lot of you got HTTP 400, which makes sense... but I don't know if you're doing it wrong or some quirk of the system gave you a different response.

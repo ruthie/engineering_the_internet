@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{enumerate}
+
+\title{Homework N:  HTML Forms}
+
+\begin{document}
+\maketitle
+
+%HTML 
+
+\section{Life Skills}
+
+I've set up a form at [url].  Your job is to submit an entry to the form without actually loading the webpage in a browser.
+
+\section{Critical Thinking}
+
+List a couple of annoying things that you could do by submitting arbitrary information to a form.
+
+\section{Moral thinking}
+What you're doing here is a sort of baby cross site request forgery attack.  
+
+Note:  In this exercise we do something that can be used to subvert the intended use of a web form.  Most of the time for forms that are as unprotected as this one, this will annoy the people who set up the form.  In other cases, you can cause damage to someone's project.  Employ maturity when using these skills.
+
+On that note, please do not automate your form to continually submit to my form.  It will annoy me and hamper me in grading your assignment.
+
+\section{Engineering}
+As you can see, it's pretty easy to do this simple attack.  Luckily for every organization that runs web pages that take user input like this, there are simple ways to defend against this attack.
+
+%set up a form that uses csrf verification
+%maybe a super simple form of csrf verification, where every form page load has an id
+
+%let students figure out how that works
+
+%ask them to submit to that form anyway
+
+%point out that this makes it a lot harder to script
+
+\end{document}

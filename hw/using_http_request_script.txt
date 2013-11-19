@@ -1,0 +1,10 @@
+Instructions:
+
+If you are working in a virtual machine, you should follow all of these instructions from within the virtual machine, not in the Windows part of your computer.
+
+1.  Go to the class website and click on the link that says "HTTP request script for Week 3 Homework."
+2.  Save the file to your desktop by clicking "save" in the "file" menu or using control-s.  You should call it "http-request.py"
+3.  Open up a terminal and change directories to the Desktop folder.
+4.  type "ls"  you should see the "http-request.py" file is in your current directory.
+5.  type "python http-request.py".  You should get a short message which says "Usage: http_request.py host port".  If you don't get this message,  you haven't set up correctly.  If you get an error message, read it carefully and see if you can figure out what it means.  Check that you have followed the instructions correctly.
+6.  If you do get the expected message, now try typing "pythong http-request.py engineeringtheinternet.nfshost.com 80" to do the first part of problem 1. 

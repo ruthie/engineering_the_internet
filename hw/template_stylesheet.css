@@ -1,0 +1,67 @@
+/* the "body" selector will be the default for the whole document*/
+
+body {
+/*
+   background: purple;
+   color: black;
+   font-family:cursive;
+
+*/   
+}
+
+/* what you put here will override the body selector*/
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+a {
+
+}
+
+ul {
+    
+}
+
+li {
+
+}
+
+/* id-based selectors begin with #
+ What you put here will override the html-tag based selectors*/
+
+#teacher {
+
+}
+
+#program {
+
+}
+
+#basics {
+
+}
+
+#lecture-notes {
+
+}
+
+#homework {
+
+}
+
+#extra-reading {
+
+}
+
+#css-resources {
+
+}

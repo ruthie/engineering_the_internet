@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{textcomp}
+
+\title{Homework 2:  networking}
+
+\begin{document}
+\maketitle
+
+Due:  Monday, July 22nd
+
+\section{Setting up complex commands}
+Find a single-line command which finds each of the following:
+\begin{enumerate}[a]
+
+\item A ``long'' listing of the files in the \texttt{/etc} directory.
+\item A ``long'' listing of all files in the \texttt{/etc} directory whose name contains the string ``.conf''.
+\item A ``long'' listing of all files in the \texttt{/etc} directory sorted by increasing file size.
+\item A ``long'' listing of any five (and only five) files in the \texttt{/etc} directory.
+\item A ``long'' listing of the smallest 5 files in the \texttt{/etc} directory.
+\item A ``long'' listing of the smallest 5 files in the \texttt{/etc} directory whose name contains the string ``.conf'' sorted by increasing file size.
+
+\end{enumerate}
+
+\section{ifconfig (Tuesday)}
+ifconfig gives information about your configured network interfaces.  Note:  on Athena you probably have to give the entire path of the program which is \texttt{/sbin/ifconfig}.  Run \texttt{ifconfig} on your computer (or an athena computer) and answer the following questions about the output.
+
+\begin{enumerate}[a]
+\item Put all of the ip addresses you can find in the output on XKCD map of the internet.  Do they make sense?
+\item The \texttt{Link encap} parameter tells you what link layer protocol you are using on that interface.  What's the most common one?
+\item You probably have an \texttt{lo} interface.  Can you figure out what this interface is?  Try reading the output carefully, pinging the ip address, then google.  Once you figure it out, reread the output to see if you understand it better.
+\end{enumerate}
+
+
+\section{ping (Wednesday)}
+
+\begin{enumerate}[a]
+\item Try pinging the following servers.  Write down the ip address and round trip time for each.
+  \begin{enumerate}
+    \item MIT (mit.edu)
+    \item ESP (esp.mit.edu)
+    \item University of California at Berkeley (berkeley.edu)
+    \item Google (google.com)
+    \item Cambridge University (cam.ac.uk)
+    \item Technische Universitat Berlin (tu-berlin.de)
+  \end{enumerate}
+
+\item Which are fastest?  Which are slowest?  Do any of these surprise you?
+\item Take a look at the XKCD map of the internet (attached).  For each of the hosts above, mark where it is.  Which make sense?  Are there some that don't?
+\item Try pinging harvard.edu.  What happens?  Can you guess why?
+\item Give a command that pings your own computer (it should have a faster round trip time than any of the servers from the list if you do it right).
+\item (Optional)  Compare ping times on a laptop to ping times from an Athena computer (if you are using PuTTY, then you should consider yourself on an Athena computer for this exercise).  Which are faster (if any)?  Which are slower (if any)?
+\end{enumerate}
+
+
+\section{traceroute (Wednesday)}
+Traceroute is a utility you can use to see what route your packets are taking.  Note that on Athena, you probably have to run \texttt{sudo apt-get install traceroute} before running traceroute.  Alternatively, you can ssh into linux.mit.edu, which has traceroute installed already.
+
+\begin{enumerate}[a]
+
+\item run traceroute to \texttt{www.slac.stanford.edu}.  Draw the route (as best you can) on a map.  You probably won't be able to mark every server, but some of the servers should have names that allow you to guess where you are.
+
+\item Which hops are the longest?  Which are the shortest?  Are there any hops that seem particularly fast (or slow) given the distance they are traveling?
+
+\item Go to \texttt{http://www.slac.stanford.edu/cgi-bin/nph-traceroute.pl}.  Click ``yes.'' This site will run traceroute from a server at Stanford to your IP address (if this bothers your computers security software, don't worry, but try it on an Athena machine).  Use the output to mark on your map the route back.  Is it the same as the route as you got when you ran traceroute to the same server?
+
+\end{enumerate}
+
+\end{document}

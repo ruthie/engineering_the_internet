@@ -1,0 +1,24 @@
+localhost.  What is this?
+
+MIT often got people an address that started with 23.
+This is because MIT uses a content distributor.
+
+Harvard.edu 
+Lots of good possible answers
+*lost packets -- pretty unlikely 
+
+*site down/too much traffic -- can we reach it via a web browser
+
+*incorrect ip address
+
+*we don't have access
+    well, ping doesn't really do the authentication thing.
+
+*firewall -- hard to say, but if this were it we'd probably expect every computer within Harvard to be unreachable
+seas.harvard.edu is not
+
+*is configured not to respond to pings.
+
+If you ping from Athena, local addresses are probably faster, but things far away are dominated by the distance.
+
+traceroute:  I screwed this one up

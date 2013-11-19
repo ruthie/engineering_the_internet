@@ -1,0 +1,12 @@
+Yazi -- DNS x (demo-- dig)
+Charley -- IRC
+Ro -- SMTP
+Maggie -- ICMP x (demo-- traceroute or similar)
+Evelyn -- NTP
+Fatima -- LPD
+Yousef -- IPv6
+Hexi -- ALOHA
+Merlin -- time division multiplexing
+Akiva -- IEEE
+Devin -- UDP
+Henry -- Token ring

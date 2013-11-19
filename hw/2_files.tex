@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{textcomp}
+
+\title{Homework 1:  bash}
+
+\begin{document}
+\maketitle
+
+Due:  Monday, July 15th
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{File Paths (Tuesday)}
+\begin{enumerate}[a]
+\item What is the absolute filepath of your home folder on your laptop (or someone else's)?
+\item What is the absolute filepath of the home folder of espuser on Athena?  Hint:  you can use the \texttt{realpath} command, or you can us \texttt{cd} to navigate around until you figure it out.
+\item Give some guesses as to why the path is so much longer on Athena than on a laptop.
+\item What file or folder does \texttt{$\sim$/.} point to (give an absolute file path)?
+\item What file or folder does \texttt{$\sim$/./././././.} point to (give an absolute file path)?
+\item Challenge:  find a folder where ``\texttt{.}'' and ``\texttt{..}'' point to the same folder.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{grep (Tuesday)}
+Grep is a command which looks for the string you give it in a file or in all of the files in a directory.  To search for the word ``cat'' in a file ``\texttt{animals.txt}'', you can type ``\texttt{grep cat animals.txt}.''  To search for the word ``cat'' in a folder ``\texttt{animals}'', you can type ``\texttt{grep -r cat animals}'' into a terminal.
+
+In this exercise, we will investigate how ``grep'' works.  You may have to set up some files and folders to run experiments on, using the commands we talked about in class.
+
+\begin{enumerate}[a]
+\item Find a text file and see if there are any cats in it by using grep to search for the word ``cat''.
+\item Give a command to search for your favorite animal in your home directory ($\sim$).
+\item You probably get a bunch of out put that starts with ``Binary file ...''.  What does that mean? 
+\item Does \texttt{grep} find filenames?  For example, if I have a file named ``\texttt{cat.txt}'' which doesn't actually have the word ``cat'' in it, will \texttt{grep} still find the file?
+\item Does \texttt{grep} return places where the string appears, but isn't the whole word?  For example, if I search for ``cat'' in a file with the word ``catdog'' but no other mention of cats, will I get a result?
+\item Can you change this default behaviour?  Hint:  the next exercise may help you with this.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{man (Tuesday)}
+You can find the manual page for a command by typing ``\texttt{man} '' and then the name of the command into a terminal.  For example, ``\texttt{man grep}'' will tell you more about the grep command.  You can leave a man page by typing ``\texttt{q}''\\
+
+Man pages are notoriously difficult to read.  They are written in very technical language and use lots of abbreviations.  You'll probably gradually get more comfortable using man pages.  In the mean time, you can use them to figure out what a command does in general (that's usually right at the top).  Some man pages also have an ``examples'' section near the bottom, which is particularly useful.
+
+\begin{enumerate}[a]
+\item Give a command that will get you the manual for the \texttt{man} program.
+\item Take a look at some manual pages for commands you already know.  Look at how they're structured.
+\item Open the man page for ``\texttt{grep}''.  In the words of the man page, what does the ``-r'' option do?
+\item Use the grep man page to figure out what option to use to do a case insensitive search (where capital and lowercase letters are treated the same way). 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{pipes (Wednesday)}
+
+Find a single-line command which dose each of the following.  Remember to test all of your commands.
+\begin{enumerate}[a]
+
+\item Writes the phrase ``Hello, world!'' to a file called ``hello.txt.'' by redirecting the output of another command (hint:  we did this in class).
+\item Finds the number of words in the file \texttt{/usr/share/dict/words}.
+\item Finds a list of words in \texttt{/usr/share/dict/words} which have the letter ``z''.
+\item Finds a list of words in \texttt{/usr/share/dict/words} which has both the letter ``z'' and the letter ``x''.
+
+\end{enumerate}
+
+\section{Setting up complex commands (Wednesday)}
+Find a single-line command which finds each of the following:
+\begin{enumerate}
+
+\item A ``long'' listing of the files in the \texttt{/etc} directory.
+\item A ``long'' listing of all files in the \texttt{/etc} directory whose name contains the string ``.conf''.
+\item A ``long'' listing of all files in the \texttt{/etc} directory sorted by increasing file size.
+\item A ``long'' listing of any five (and only five) files in the \texttt{/etc} directory.
+\item A ``long'' listing of the smallest 5 files in the \texttt{/etc} directory.
+\item A ``long'' listing of the smallest 5 files in the \texttt{/etc} directory whose name contains the string ``.conf'' sorted by increasing file size.
+
+\end{enumerate}
+
+
+\section{which (Wednesday, optional)}
+The ``\texttt{which}'' command tells you which executable file runs when you type a 
+\begin{enumerate}[a]
+\item Where is the binary executable file for \texttt{grep}?
+\item What happens if you replace \texttt{grep} with the absolute filepath of the executable in a command?  Feel free to try this with some other commands.
+%\item Where is the binary executable file for \texttt{bash}?
+%\item What does \texttt{echo ls | /bin/bash} do?  (Guess first, then check by trying it!)\\
+\item Find a command for which ``which'' doesn't return anything, but which still does something (so not a command which doesn't exist).  Why do you suppose this is?
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Challenge (Wednesday, optional)}
+\begin{enumerate}[a]
+\item Where are man pages stored?  There are probably several directories on a given computer; you just need to give one here.  Hint:  read the man page for the man command.
+
+\item Lots of people think it's incredibly sexist that there is a \texttt{man} command but no \texttt{woman} command.  There's another command, \texttt{alias} which will allow you to ``nickname'' a command-- give yourself a personal shortcut which lasts until you close your terminal.  Use \texttt{alias} to give \texttt{wowan} the same behaviour as \texttt{man}.  Hint:  read the man page for \texttt{alias}.
+
+\end{enumerate}
+
+%% \section*{References and Resources}
+%% \begin{enumerate}
+%% \item Technical documentation written in technical language:
+%% $$\texttt{http://www.gnu.org/software/bash/manual/bashref.html}$$
+%% This manual has more to say about how bash works than how to work with bash, but you may find it interesting (or possibly, exhasperating).
+%% \end{enumerate}
+
+
+\end{document}

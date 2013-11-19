@@ -1,0 +1,22 @@
+*Lots of you seemed to be going out of your way not to use pipes.  Once you know how, it's a lot easier to do a lot of things using pipes.
+
+*test your commands!  you should see not only that they exit, but that they do the thing you expect.
+
+Confusion that's probably my fault about file paths:
+file paths don't generally include $
+prompt usually includes a bunch of stuff, including the file path.
+
+writing Hello World to a file?  
+
+4c)  Maggie show her solution?
+grep z /usr/share/dict/words | grep x
+
+have 100,000 words.  How many have both x and z?  Not a lot.  
+
+answer I got from a couple of people:
+grep z /usr/share/dict/words | grep x /usr/share/dict/words
+
+might help you to think of:
+cat /usr/share/dict/words | grep z | grep x
+because we use grep the same way both times
+
