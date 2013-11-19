@@ -1,0 +1,40 @@
+body {
+	background-image:url('http://desktop.freewallpaper4.me/view/original/2394/dark-wood-flooring.jpg');
+	color: white;
+	font-family: "serif"; 	
+	
+}
+	a:link {color:#00FF00;}      /* unvisited link */
+	a:visited {color:#00FF00;}
+#basics {
+	width: 250px;
+	height: 45%;
+	float: left;
+ 
+}
+ 
+#lecture-notes {
+	width: 375px;
+	height: 60%;
+	float: left; 
+}
+ 
+#homework {
+	width: 400px;
+	height: 60%;
+	float: left; 
+}
+ 
+#extra-reading {
+	width: 800px;
+	height: 60%;
+	float: left; 
+}
+ 
+#css-resources {
+	width: 800px;
+	height: 60%;
+	float: left; 
+}
+ 
+ 

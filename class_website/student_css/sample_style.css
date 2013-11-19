@@ -1,0 +1,22 @@
+body {
+    background: green;
+    color: white;
+    font-family: "Impact";
+}
+#breadfish {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#otherfish {
+    width:  50%;
+}
+
+a {
+    color:  white;
+}
+
+.comic-sans {
+    font-family: "Comic Sans MS";
+}

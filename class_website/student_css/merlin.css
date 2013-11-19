@@ -1,0 +1,78 @@
+/* the "body" selector will be the default for the whole document*/
+
+body {
+
+   background-image:url('/Users/merlinkatz/Downloads/grey_wash_wall/grey_wash_wall.png');
+   background-attachment:fixed;
+   color: black;
+   font-family: Bell MT;
+   text-align: center;
+   
+}
+
+/* what you put here will override the body selector*/
+
+h1 {
+   background: 3366CC;
+   letter-spacing: -3px;
+   word-spacing: 5px;
+   font-size: 300%;
+   border: 8px solid grey
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+a, a:link {
+   color:#CCCCCC;
+   padding-right: 50px;
+   font-family: Consolas;
+}
+
+a, a:visited, a:hover, a:active {
+   color:#999999;
+}
+
+ul {
+    
+}
+
+li {
+   list-style-position:inside;
+}
+
+/* id-based selectors begin with #
+ What you put here will override the html-tag based selectors*/
+
+#teacher {
+
+}
+
+#program {
+
+}
+
+#basics {
+
+}
+
+#lecture-notes {
+
+}
+
+#homework {
+
+}
+
+#extra-reading {
+
+}
+
+#css-resources {
+
+}

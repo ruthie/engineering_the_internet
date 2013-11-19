@@ -1,0 +1,55 @@
+body {
+   background: #C9C9C9;
+   color: black;
+   font-variant: small-caps;
+   font-family: Comic Sans MS;
+}
+
+h1 {
+   color: white;
+   text-align: center;
+   background-color: black;
+
+}
+
+h2 {
+   color: green;
+
+}
+
+h3 {
+   color: red;
+
+}
+
+a {
+   color: blue;
+
+}
+
+ul {
+   color: green;
+    
+}
+
+li {
+   color: #004C1A;
+
+}
+
+/* id-based selectors begin with #
+ What you put here will override the html-tag based selectors*/
+
+#teacher {
+   color: purple;
+   text-align: center;
+   background-color: #C9C9C9;
+
+}
+
+#program {
+   color: purple;
+   text-align: center;
+   background-color: #C9C9C9;
+   
+}

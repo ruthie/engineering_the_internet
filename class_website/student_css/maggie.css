@@ -1,0 +1,68 @@
+/* the "body" selector will be the default for the whole document*/
+
+body {
+
+   background: black;
+   color: white;
+   font-style: italic;
+   font-family: courier new;
+ 
+}
+
+/* what you put here will override the body selector*/
+
+h1 {
+   background: lime;
+   text-align: center;
+}
+
+h2 {
+   background: lime;
+}
+
+h3 {
+ 
+}
+
+a {
+   
+}
+
+ul {
+    
+}
+
+li {
+
+}
+
+/* id-based selectors begin with #
+ What you put here will override the html-tag based selectors*/
+
+#teacher {
+   text-align: center;
+}
+
+#porgram {
+   text-align: center;
+}
+
+#basics {
+
+}
+
+#lecture-notes {
+
+}
+
+#homework {
+
+}
+
+#extra-reading {
+
+}
+
+#css-resources {
+
+}

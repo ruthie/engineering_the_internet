@@ -1,0 +1,85 @@
+/* the "body" selector will be the default for the whole document*/
+
+body {
+   background-image:url('http://drewsworld.net/wp-content/uploads/2013/01/boxes-lighting-backdrop.jpg');
+   color: black;
+   font-size: 160%;
+   font-weight: 700;
+   font-family:chiller;
+   
+}
+
+a:link {
+   COLOR: purple;
+
+}
+
+a:visited {
+COLOR: orange;
+
+}
+
+a:hover {
+COLOR: #CC6699;
+
+}
+
+/* what you put here will override the body selector*/
+
+h1 {
+  text-align: center;
+  font-family: Lucida Sans Unicode;
+  font-size: 150%;
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+a {
+
+}
+
+ul {
+    
+}
+
+li {
+
+}
+
+/* id-based selectors begin with #
+ What you put here will override the html-tag based selectors*/
+
+#teacher {
+
+}
+
+#program {
+
+}
+
+#basics {
+
+}
+
+#lecture-notes {
+
+}
+
+#homework {
+
+}
+
+#extra-reading {
+
+}
+
+#css-resources {
+
+}

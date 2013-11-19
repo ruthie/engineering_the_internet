@@ -1,0 +1,66 @@
+/* the "body" selector will be the default for the whole document*/
+body {
+
+   background: SteelBlue;
+   color: White;
+   font-family:Lucida Sans Unicode;
+
+}
+
+/* what you put here will override the body selector*/
+
+h1 { background: deepskyblue;
+
+}
+h2 { background: lightskyblue;
+
+}
+
+h3 {Background: lightseagreen;
+
+}
+
+a {
+
+}
+
+ul {
+    
+}
+
+li {
+
+}
+
+/* id-based selectors begin with #
+ What you put here will override the html-tag based selectors*/
+
+#teacher { font-family: tahoma;
+
+}
+
+#program {font-family: tahoma;
+
+}
+
+#basics {font-family:
+
+}
+
+#lecture-notes {font-family:
+
+}
+
+#homework {font-family:Trebuchet MS;
+
+}
+
+#extra-reading {font-family:Courier New;
+
+
+}
+
+#css-resources {
+font-family:Lucida Console
+
+}
